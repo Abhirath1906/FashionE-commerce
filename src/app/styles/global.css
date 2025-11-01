@@ -87,7 +87,8 @@ body {
 .Header2 {
   display: flex;
   gap: 50px;
-  align-items: center
+  align-items: center;
+  margin-right: 50px;
 }
 
 .loginn {
@@ -105,6 +106,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
+  padding: 10px;
 }
 
 
@@ -334,7 +336,7 @@ body {
   gap: 50px;
 }
 
-.gambar4{
+.gambar4 {
   background-size: cover;
   background-position: center;
   position: relative;
@@ -342,7 +344,7 @@ body {
 }
 
 
-.LoginCard{
+.LoginCard {
   position: relative;
   z-index: 1;
   margin-top: 100px;
@@ -350,18 +352,18 @@ body {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
 }
 
-.InputLogin{
+.InputLogin {
   width: 300px;
-  
+
 }
 
-.DivLogin{
+.DivLogin {
   display: flex;
   justify-content: center;
   margin-top: 60px;
 }
 
-.welcomeLogin{
+.welcomeLogin {
   display: flex;
   justify-content: center;
   font-size: 30px;
@@ -369,36 +371,36 @@ body {
 }
 
 
-.continueLogin{
+.continueLogin {
   display: flex;
   justify-content: center;
   opacity: 0.5;
 }
 
 
-.ButtonSubmitLogin{
- width: 300px;
- background-color: #00264d;
+.ButtonSubmitLogin {
+  width: 300px;
+  background-color: #00264d;
 }
 
 
-.Keranjang{
+.Keranjang {
   font-size: 35px;
 }
 
 
 /*Woman page*/
 
-.CardWoman{
+.CardWoman {
   padding: 30px;
 }
 
-.DivCardWoman{
+.DivCardWoman {
   display: flex;
 
 }
 
-.allDivWoman{
+.allDivWoman {
   display: flex;
   justify-content: center;
   gap: 100px;
@@ -490,6 +492,15 @@ body {
     font-size: 36px;
     margin-bottom: 80px;
   }
+
+  .TheHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
 }
 
 
@@ -497,13 +508,13 @@ body {
 
 /* Mobile Landscape (≤768px) */
 @media (max-width: 768px) {
+
   /* HEADER */
   .DivHeader2 {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
-    padding: 10px;
   }
 
   .inputt2 {
@@ -515,7 +526,22 @@ body {
     gap: 15px;
   }
 
+  .TheHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+
+
   /* HERO SECTION */
+
+  .animated-bg2{
+    margin-top: 50px;
+  }
+
   .IsiCont {
     flex-direction: column;
     padding: 40px 0;
@@ -541,7 +567,7 @@ body {
   .IsiCont img {
     width: 80%;
     height: auto;
-    margin-left:80px;
+    margin-left: 20px;
   }
 
   /* TABS SECTION */
@@ -557,9 +583,39 @@ body {
     display: block;
   }
 
+  .tabss {
+    display: flex;
+    justify-content: center;
+  }
+
   .divTabs {
-    margin-top: 20px;
-    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+
+  }
+
+  .TheHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+
+  
+
+  .tabss .ant-tabs-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .tabss .ant-tabs-nav-list {
+    justify-content: center;
   }
 
   .tabss .ant-tabs-nav-list {
@@ -580,15 +636,30 @@ body {
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
   .TheHeader {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .DivHeader2{
+    font-size: 1px;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .Header2{
+    margin-right: 20px;
   }
 
   .Sora {
-    font-size: 22px;
+    font-size: 1px;
   }
 
   .inputt2 {
-    width: 90%;
+    width: 50%;
   }
 
   .IsiText2 {
@@ -597,7 +668,7 @@ body {
 
   .IsiCont img {
     width: 90%;
-    
+  
   }
 
   .divTextTabs2 {
@@ -605,7 +676,7 @@ body {
   }
 
   .tabss .ant-tabs-tab {
-    font-size: 13px;
+    font-size: 12px;
     padding: 5px 12px;
   }
 

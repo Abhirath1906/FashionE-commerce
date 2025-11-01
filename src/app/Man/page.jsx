@@ -3,14 +3,14 @@ import { Avatar, Spin, Card, Row, Col, Divider,Button } from "antd";
 import { useEffect, useState } from "react";
 
 export default function WomanPage() {
-    const [data, setData] = useState([]);
+    const [data2, setData2] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("/api/woman")
+        fetch("/apii/man")
             .then((res) => res.json())
             .then((json) => {
-                setData(json);
+                setData2(json);
                 setLoading(false);
             })
             .catch((err) => console.error(err));
@@ -34,10 +34,10 @@ export default function WomanPage() {
     return (
         <div className="woman-container">
             <Divider />
-            <h2 className="woman-title">Woman Collection</h2>
+            <h2 className="woman-title">Man Collection</h2>
             <div>
                 <Row className="allDivWoman" gutter={[24, 32]} >
-                    {data.map((item, index) => (
+                    {data2.map((item, index) => (
                         <Col
                             key={index}
                             xs={24}

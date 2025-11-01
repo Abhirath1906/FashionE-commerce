@@ -5,12 +5,17 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import React, { useState, useEffect } from 'react';
-import {ShoppingCartOutlined } from "@ant-design/icons";
+import { ShoppingCartOutlined } from "@ant-design/icons";
 import { Layout, Button, Input, Tabs, Spin, message } from "antd";
 import "../styles/global.css";
 import Link from "next/link";
 import Image from "next/image";
 import WomanPage from '../Woman/page';
+import ManPage from "../Man/page"
+import ShoesPage from "../Shoes/page"
+import JewerlyPage from "../Jewerly/page"
+import AccessoriesPage from "../Accessories/page"
+import AllPage from "../All/page"
 
 const { Header, Content } = Layout;
 
@@ -53,16 +58,17 @@ export default function ShopPage() {
   }
 
   const items = [
-    { key: "1", label: "Woman", children: <WomanPage/>},
-    { key: "2", label: "Man", children: <p>Man Collection</p> },
-    { key: "3", label: "Shoes", children: <p>Shoes Collection</p> },
-    { key: "4", label: "Jewerly", children: <p>Jewerly Collection</p> },
-    { key: "5", label: "All", children: <p>All Collection</p> },
+    { key: "1", label: "Woman", children: <WomanPage /> },
+    { key: "2", label: "Man", children: <ManPage /> },
+    { key: "3", label: "Shoes", children: <ShoesPage /> },
+    { key: "4", label: "Jewerly", children: <JewerlyPage /> },
+    { key: "5", label: "Accessories", children: <AccessoriesPage /> },
+    { key: "6", label: "All", children: <AllPage /> },
   ];
 
   return (
     <Layout className="TheAll">
-      <Header className="TheHeader">
+      <Layout className="TheHeader">
         <div className="DivHeader2">
           <div className="isiDivHeader2">
             <Link className="Sora" style={{ color: "black" }} href="/">
@@ -101,10 +107,10 @@ export default function ShopPage() {
               </Button>
             )}
 
-            <ShoppingCartOutlined className='Keranjang'/>
+            <ShoppingCartOutlined className='Keranjang' />
           </div>
         </div>
-      </Header>
+      </Layout>
 
       <Content className="animated-bg2" style={{ position: "relative", zIndex: 1 }}>
         <div className="IsiCont">
@@ -129,9 +135,11 @@ export default function ShopPage() {
         </div>
 
         <div className="divTabs">
-          <Tabs className="tabss" items={items} />
+        <div className="tabs-wrapper">
+          <Tabs className="tabss" centered items={items} />
         </div>
-      </Content>
-    </Layout>
+      </div>
+    </Content>
+    </Layout >
   );
 }
