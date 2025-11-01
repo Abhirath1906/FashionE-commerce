@@ -1,0 +1,734 @@
+@import "tailwindcss";
+
+
+.TheAll {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
+
+body {
+  background: radial-gradient(circle at 20% 30%,
+      rgba(173, 216, 255, 0.6),
+      rgba(240, 247, 255, 0.9) 40%,
+      rgba(255, 255, 255, 1) 80%),
+    linear-gradient(to bottom right, #f9fbff, #eef5ff);
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 25% 25%,
+      rgba(255, 255, 255, 0.5),
+      rgba(203, 225, 249, 0.9) 50%,
+      rgba(255, 255, 255, 1) 90%);
+  animation: floatBg 10s ease-in-out infinite alternate;
+
+}
+
+.animated-bg2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle at 25% 25%,
+      rgba(203, 225, 249, 0.9),
+      rgba(255, 255, 255, 0.5)50%,
+      rgba(255, 255, 255, 1) 90%);
+  animation: floatBg 10s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes floatBg {
+  0% {
+    background-position: 50% 30%;
+  }
+
+  50% {
+    background-position: 10% 20%;
+  }
+
+  100% {
+    background-position: 20% 30%;
+  }
+}
+
+
+.DivHeader {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.Sora {
+  font-size: 30px;
+  color: hsl(215, 85%, 25%);
+  font-weight: bold;
+}
+
+
+
+.ShopButton {
+  background-color: hsl(215, 85%, 25%);
+  color: white;
+}
+
+.Header2 {
+  display: flex;
+  gap: 50px;
+  align-items: center
+}
+
+.loginn {
+  color: black;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.TheHeader {
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+.gradient-text {
+  background: linear-gradient(to right, #0a2b73, #0073e6, #00b8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+
+}
+
+
+.TitleCont {
+  margin-top: 170px;
+  font-size: 60px;
+  font-weight: 800;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.collect {
+  font-size: 15px;
+  font-weight: 100;
+  margin-left: 3px;
+  background-color: #dff1ff;
+  color: #1b4f8a;
+  width: fit-content;
+  padding: 7px;
+  border-radius: 30px;
+
+}
+
+
+.TextCont {
+  margin-left: 20px;
+  padding: 10px;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.Explore {
+  margin-left: 25px;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #0a3475;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 200;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.Explore:hover {
+  background-color: #0f4aa3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+
+.allDivCont {
+  display: flex;
+  align-items: center;
+  gap: 250px;
+  margin-top: -50px;
+}
+
+.ThePicture {
+  margin-top: 170px;
+
+}
+
+.gambarr {
+  width: 500px;
+  height: 400px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+
+.stats-section {
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0a3475;
+  margin-bottom: 6px;
+}
+
+.stat-box p {
+  font-size: 11px;
+  color: #6b7b91;
+  font-weight: 500;
+}
+
+
+
+
+.IsiCont {
+  display: flex;
+  align-items: center;
+  margin-top: 65px;
+  background-color: #1E3357;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 30);
+
+}
+
+
+.isiDivHeader2 {
+  display: flex;
+  gap: 50px;
+  width: 500px;
+  align-items: center;
+}
+
+
+.IsiText2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+
+.AlldivAwal {
+  display: flex;
+  align-items: center;
+  gap: 136px;
+  color: white;
+}
+
+.DivTextAwal {
+  margin-left: 75px;
+}
+
+
+/* --- Tabs Container --- */
+.divTabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+
+.tabss .ant-tabs-nav {
+  margin: 0;
+  border-bottom: none;
+}
+
+.tabss .ant-tabs-nav-list {
+  display: flex;
+  gap: 12px;
+}
+
+
+.tabss .ant-tabs-tab {
+  background-color: #cce6ff;
+  border-radius: 9999px;
+  padding: 6px 20px;
+  margin: 0;
+  transition: all 0.25s ease;
+}
+
+
+.tabss .ant-tabs-tab-btn {
+  color: #00264d;
+  font-weight: 500;
+}
+
+
+.tabss .ant-tabs-tab:hover {
+  background-color: #b3daff;
+}
+
+
+.tabss .ant-tabs-tab-active {
+  background-color: #0b2342;
+}
+
+.tabss .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: white;
+  font-weight: 600;
+}
+
+
+.tabss .ant-tabs-ink-bar {
+  display: none !important;
+}
+
+
+.divTextTabs2 {
+  display: flex;
+  justify-content: center;
+  font-size: 45px;
+  margin-top: 50px;
+  font-weight: 700;
+  margin-bottom: 150px;
+}
+
+.span2 {
+  margin-left: 180px;
+}
+
+
+.sign-in {
+  background-color: hsl(215, 85%, 25%);
+  padding: 20px;
+  color: white;
+}
+
+
+.inputt2 {
+  width: 350px;
+  margin-right: 230px;
+}
+
+.DivHeader2 {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.gambar4{
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+
+
+.LoginCard{
+  position: relative;
+  z-index: 1;
+  margin-top: 100px;
+  width: fit-content;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+}
+
+.InputLogin{
+  width: 300px;
+  
+}
+
+.DivLogin{
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.welcomeLogin{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+
+.continueLogin{
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+}
+
+
+.ButtonSubmitLogin{
+ width: 300px;
+ background-color: #00264d;
+}
+
+
+.Keranjang{
+  font-size: 35px;
+}
+
+
+/*Woman page*/
+
+.CardWoman{
+  padding: 30px;
+}
+
+.DivCardWoman{
+  display: flex;
+
+}
+
+.allDivWoman{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+}
+
+.woman-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #111;
+}
+
+.woman-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.woman-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.woman-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.woman-avatar {
+  margin-bottom: 15px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.woman-name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #333;
+}
+
+.woman-price {
+  font-weight: 600;
+  font-size: 15px;
+  color: #111;
+  margin-top: 5px;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE SHOP PAGE */
+/* ========================= */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .isiDivHeader2 {
+    width: auto;
+    gap: 20px;
+  }
+
+  .inputt2 {
+    width: 250px;
+  }
+
+  .Keranjang {
+    font-size: 30px;
+  }
+
+  .IsiText2 {
+    font-size: 34px;
+  }
+
+  .AlldivAwal {
+    gap: 80px;
+  }
+
+  .DivTextAwal {
+    margin-left: 30px;
+  }
+
+  .divTextTabs2 {
+    font-size: 36px;
+    margin-bottom: 80px;
+  }
+}
+
+
+/*SHOP PAGE RESPONSIVE*/
+
+/* Mobile Landscape (≤768px) */
+@media (max-width: 768px) {
+  /* HEADER */
+  .DivHeader2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+  }
+
+  .inputt2 {
+    width: 70%;
+    margin-right: 0;
+  }
+
+  .Header2 {
+    gap: 15px;
+  }
+
+  /* HERO SECTION */
+  .IsiCont {
+    flex-direction: column;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .AlldivAwal {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .DivTextAwal {
+    margin-left: 0;
+  }
+
+  .IsiText2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .IsiCont img {
+    width: 80%;
+    height: auto;
+    margin-left:80px;
+  }
+
+  /* TABS SECTION */
+  .divTextTabs2 {
+    font-size: 30px;
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 50px;
+  }
+
+  .span2 {
+    margin-left: 0;
+    display: block;
+  }
+
+  .divTabs {
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .tabss .ant-tabs-nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tabss .ant-tabs-tab {
+    padding: 5px 14px;
+    font-size: 14px;
+  }
+
+  .Keranjang {
+    font-size: 28px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .TheHeader {
+    position: relative;
+  }
+
+  .Sora {
+    font-size: 22px;
+  }
+
+  .inputt2 {
+    width: 90%;
+  }
+
+  .IsiText2 {
+    font-size: 24px;
+  }
+
+  .IsiCont img {
+    width: 90%;
+    
+  }
+
+  .divTextTabs2 {
+    font-size: 24px;
+  }
+
+  .tabss .ant-tabs-tab {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+
+  .Keranjang {
+    font-size: 26px;
+  }
+}
+
+/* Mobile Landscape (≤768px) */
+@media (max-width: 768px) {
+  .TitleCont {
+    margin-top: 10px;
+    font-size: 36px;
+    text-align: center;
+
+  }
+
+  .collect {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .TextCont {
+    text-align: center;
+    font-size: 15px;
+    margin: 0 auto;
+  }
+
+  .Explore {
+    margin: 15px auto;
+    display: block;
+  }
+
+  .allDivCont {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 60px;
+    margin-top: 0;
+  }
+
+  .ThePicture {
+    margin-top: 60px;
+  }
+
+  .gambarr {
+    width: 420px;
+    height: 460px;
+    margin-top: 100px;
+  }
+
+  .stats-section {
+    margin-top: 30px;
+  }
+
+  .stat-box h2 {
+    font-size: 24px;
+  }
+
+  .stat-box p {
+    font-size: 13px;
+  }
+
+  .Header2 {
+    gap: 25px;
+  }
+
+  .Sora {
+    font-size: 24px;
+  }
+
+  .loginn {
+    font-size: 16px;
+  }
+
+  .ShopButton {
+    font-size: 14px;
+    padding: 0 12px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .TitleCont {
+    font-size: 28px;
+  }
+
+  .TextCont {
+    font-size: 14px;
+  }
+
+  .Explore {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .gambarr {
+    width: 260px;
+    height: 200px;
+    margin-top: 50px;
+  }
+
+  .stat-box h2 {
+    font-size: 22px;
+  }
+
+  .stat-box p {
+    font-size: 12px;
+  }
+
+  .Sora {
+    font-size: 22px;
+  }
+
+  .Header2 {
+    gap: 15px;
+  }
+
+  .loginn {
+    font-size: 15px;
+  }
+
+  .ShopButton {
+    padding: 0 10px;
+    font-size: 13px;
+  }
+}
