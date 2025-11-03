@@ -1,20 +1,32 @@
 "use client"
-import { Avatar, Spin, Card, Row, Col, Divider,Button } from "antd";
+import { Avatar, Spin, Card, Row, Col, Divider, Button, Input } from "antd";
 import { useEffect, useState } from "react";
 
-export default function WomanPage() {
-    const [data4, setData4] = useState([]);
+export default function JewerlyPage({onBuy}) {
+    const [data, setData] = useState([]);
+    const [filteredData, setFilteredData] = useState([])
+    const [searchTerm, setSearchTerm] = useState("")
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch("/aappi/jewerly")
             .then((res) => res.json())
             .then((json) => {
-                setData4(json);
+                setData(json);
+                setFilteredData(json);
                 setLoading(false);
             })
             .catch((err) => console.error(err));
     }, []);
+
+
+    const handleSearch = (value) => {
+        setSearchTerm(value);
+        const filtered = data.filter((item) =>
+            item.name.toLowerCase().includes(value.toLowerCase())
+        );
+        setFilteredData(filtered);
+    };
 
     if (loading) {
         return (
@@ -35,9 +47,21 @@ export default function WomanPage() {
         <div className="woman-container">
             <Divider />
             <h2 className="woman-title">Jewerly Collection</h2>
+            <div style={{ textAlign: "center", marginBottom: 30 }}>
+                <Input
+                    placeholder="Search Products..."
+                    value={searchTerm}
+                    onChange={(e) => handleSearch(e.target.value)}
+                    style={{
+                        width: 250,
+                        borderRadius: 10,
+                        height: 40,
+                    }}
+                />
+            </div>
             <div>
                 <Row className="allDivWoman" gutter={[24, 32]} >
-                    {data4.map((item, index) => (
+                    {filteredData.map((item, index) => (
                         <Col
                             key={index}
                             xs={24}
@@ -66,10 +90,12 @@ export default function WomanPage() {
                                 <p className="woman-name" style={{ marginTop: 10, fontWeight: 500 }}>
                                     {item.name}
                                 </p>
-                                <p className="woman-price" style={{ fontWeight: 600 }}>
-                                    Rp.{item.price}
+                                <p className="jewelry-price" style={{ fontWeight: 600 }}>
+                                    Rp. {item.price.toLocaleString("id-ID")}
                                 </p>
-                                <Button style={{marginTop:"10px",backgroundColor:"#0a3475"}} type="primary">Buy +</Button>
+                                <Button style={{ marginTop: "10px", backgroundColor: "#0a3475" }} type="primary"
+                                    onClick={() => onBuy && onBuy(item.name, item.price)}
+                                >Buy +</Button>
                             </Card>
                         </Col>
                     ))}

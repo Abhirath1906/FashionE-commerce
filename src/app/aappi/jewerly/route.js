@@ -1,5 +1,5 @@
 export async function GET() {
-    const data4 = [
+    const data = [
       {
         id: 1,
         name: "Kalung Layer",
@@ -28,5 +28,5 @@ export async function GET() {
    
     ];
   
-    return Response.json(data4);
+    return Response.json(data);
   }

@@ -1,20 +1,26 @@
 "use client"
-import { Layout, Avatar, Button, Row, Col, Spin,message } from "antd"
+import { Layout, Avatar, Button, Row, Col, Spin, message,Divider } from "antd"
 import "../app/styles/global.css"
 import Link from "next/link"
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useState, useEffect } from "react"
-const { Header, Content } = Layout
+const { Header, Content, Footer } = Layout
 
 export default function Home() {
   const [Thetime, setThetime] = useState(true)
   const [Username, setUsername] = useState("");
+
+
+
+
   useEffect(() => {
     const timer = setTimeout(() => setThetime(false), 1500)
     return () => clearTimeout(timer)
   }, [])
 
 
-  
+
   useEffect(() => {
     const data = localStorage.getItem("user");
     if (data) {
@@ -30,6 +36,56 @@ export default function Home() {
       setUsername("Guest");
     }
   }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    gsap.registerPlugin(ScrollTrigger);
+  
+   
+    const anim = setTimeout(() => {
+      const headerEl = document.querySelector(".TheHeader");
+  
+      if (headerEl) {
+        gsap.fromTo(
+          headerEl,
+          { y: -80, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.2,
+            ease: "power3.out",
+          }
+        );
+      } 
+  
+    
+      gsap.fromTo(
+        ".TitleCont, .TextCont, .Explore, .ThePicture",
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.2,
+          duration: 1.2,
+          ease: "power3.out",
+          
+        }
+
+        
+      );
+    }, 400); 
+
+
+    gsap.fromTo(".stats-section .stat-box",{y:100,opacity:0},{y:0,opacity:1,duration:1.2,stagger:{
+      grid:"auto",
+      amount:1
+    }})
+  
+    return () => clearTimeout(anim);
+  }, [Thetime]);
+
+
+ 
 
   if (Thetime) {
     return (
@@ -55,31 +111,31 @@ export default function Home() {
               <div>
                 <p className="Sora">
                   <Link style={{ color: "black" }} href="/">
-                    Sora & Co
+                    Sora & Co.
                   </Link>
                 </p>
               </div>
 
               <div className="Header2">
-              {Username === "Guest" ? (
-              <Link href="/Login">
-                <Button className="Loginn" style={{ fontWeight: "500" }}>
-                  Login
-                </Button>
-              </Link>
-            ) : (
-              <Button
-                className="Loginn"
-                style={{ fontWeight: "500" }}
-                onClick={() => {
-                  localStorage.removeItem("user");
-                  message.success("Logged out successfully!");
-                  setUsername("Guest");
-                }}
-              >
-                Logout
-              </Button>
-            )}
+                {Username === "Guest" ? (
+                  <Link href="/Login">
+                    <Button className="Loginn" style={{ fontWeight: "500" }}>
+                      Login
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button
+                    className="Loginn"
+                    style={{ fontWeight: "500" }}
+                    onClick={() => {
+                      localStorage.removeItem("user");
+                      message.success("Logged out successfully!");
+                      setUsername("Guest");
+                    }}
+                  >
+                    Logout
+                  </Button>
+                )}
 
                 <Button className="ShopButton">
                   <Link style={{ fontWeight: "500" }} href="/shop">
@@ -140,7 +196,11 @@ export default function Home() {
               </div>
             </div>
           </Content>
+
+          
         </div>
+
+        
       </Layout>
     </>
   )

@@ -46,6 +46,7 @@ body {
       rgba(255, 255, 255, 1) 90%);
   animation: floatBg 10s ease-in-out infinite alternate;
   z-index: -1;
+  margin-bottom: 50px;
 }
 
 @keyframes floatBg {
@@ -75,6 +76,7 @@ body {
   font-size: 30px;
   color: hsl(215, 85%, 25%);
   font-weight: bold;
+  margin-top: -10px;
 }
 
 
@@ -89,6 +91,7 @@ body {
   gap: 50px;
   align-items: center;
   margin-right: 50px;
+  margin-top: -10px;
 }
 
 .loginn {
@@ -333,7 +336,7 @@ body {
 .DivHeader2 {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 450px;
 }
 
 .gambar4 {
@@ -457,8 +460,69 @@ body {
   margin-top: 5px;
 }
 
+.Sora2 {
+  font-size: 30px;
+  color: hsl(215, 85%, 25%);
+  font-weight: bold;
+
+}
+
+
+
+/*Footer*/
+
+.FooterText1{
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  font-size: 15px;
+}
+
+
+.TheFooter{
+  background-color: #D8ECFC;
+  box-shadow: 0 4px 80px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.Link1{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Link2{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.lastFooter{
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+}
+
+
+
+
+.DivShow {
+  position: fixed;
+  top: 80px; 
+  right: 40px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: solid black 1px;
+  z-index: 1000; 
+}
+
+
 /* ========================= */
-/* 📱 RESPONSIVE SHOP PAGE */
+/*  RESPONSIVE SHOP PAGE */
 /* ========================= */
 
 /* Tablet (≤1024px) */
@@ -514,7 +578,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 90px;
   }
 
   .inputt2 {
@@ -523,7 +587,7 @@ body {
   }
 
   .Header2 {
-    gap: 15px;
+    gap: 3px;
   }
 
   .TheHeader {
@@ -533,7 +597,12 @@ body {
     width: 100%;
     z-index: 1000;
   }
+
+  .Sora2{
+    font-size: 20px;
+  }
   
+
 
 
   /* HERO SECTION */
@@ -643,6 +712,23 @@ body {
     z-index: 1000;
   }
 
+  
+  .DivShow {
+    position: fixed;
+    top: 80px; 
+    right: 40px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: solid black 1px;
+    z-index: 1000; 
+    font-size: 10px;
+  }
+  
+  
+
   .DivHeader2{
     font-size: 1px;
     gap: 5px;
@@ -684,6 +770,12 @@ body {
     font-size: 26px;
   }
 }
+
+
+.FooterText1{
+  gap: 50px;
+}
+
 
 /* Mobile Landscape (≤768px) */
 @media (max-width: 768px) {
@@ -796,6 +888,9 @@ body {
 
   .loginn {
     font-size: 15px;
+  }
+  .collect{
+    margin-right: 78px;
   }
 
   .ShopButton {

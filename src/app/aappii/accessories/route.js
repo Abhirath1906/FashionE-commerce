@@ -1,5 +1,5 @@
 export async function GET() {
-    const data5 = [
+    const data = [
       
       {
         id: 1,
@@ -67,5 +67,5 @@ export async function GET() {
    
     ];
   
-    return Response.json(data5);
+    return Response.json(data);
   }

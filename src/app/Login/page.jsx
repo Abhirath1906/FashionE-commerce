@@ -4,6 +4,8 @@ import { Layout, Button, Card, Form, Input, Divider, Spin, message } from "antd"
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useRouter } from "next/navigation"
 
 const { Content, Header } = Layout
@@ -13,10 +15,49 @@ export default function LoginPage() {
   const [form] = Form.useForm()
   const router = useRouter()
 
+ 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    if (!Thetime) { 
+      const timer = setTimeout(() => {
+        gsap.fromTo(".TheHeader",
+          { y: -80, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1.2, ease: "power3.out" }
+        );
+
+        gsap.fromTo(".LoginCard",
+          { scale: 0.85, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 1.2, ease: "back.out(1.7)", delay: 0.3 }
+        );
+
+        gsap.fromTo(".welcomeLogin, .continueLogin",
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power3.out", delay: 0.6 }
+        );
+
+        gsap.fromTo(".ButtonSubmitLogin",
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.9 }
+        );
+      }, 400);
+
+      return () => clearTimeout(timer);
+    }
+  }, [Thetime]);
+
   useEffect(() => {
     const timer = setTimeout(() => setThetime(false), 1500)
     return () => clearTimeout(timer)
   }, [])
+
+  const handleLogin = (values) => {
+    const { username, gmail, password } = values
+    localStorage.setItem("user", JSON.stringify({ username, gmail, password }))
+    message.success(`Selamat datang, ${username}!`)
+    router.push("/shop")
+  }
 
   if (Thetime) {
     return (
@@ -31,16 +72,6 @@ export default function LoginPage() {
     )
   }
 
-
-  const handleLogin = (values) => {
-    const { username, gmail, password } = values
-
-    localStorage.setItem("user", JSON.stringify({ username, gmail, password }))
-
-    message.success(`Selamat datang, ${username}!`)
-    router.push("/shop") 
-  }
-
   return (
     <Layout>
       <Header className="TheHeader">
@@ -48,7 +79,7 @@ export default function LoginPage() {
           <div>
             <p className="Sora">
               <Link style={{ color: "black" }} href="/">
-                Sora & Co
+                Sora & Co.
               </Link>
             </p>
           </div>
@@ -65,40 +96,26 @@ export default function LoginPage() {
           src="/gambar4.png"
           alt="background"
           fill
-          style={{
-            objectFit: "cover",
-            zIndex: 0,
-          }}
+          style={{ objectFit: "cover", zIndex: 0 }}
         />
-
         <div className="DivLogin">
           <Card className="LoginCard">
             <p className="welcomeLogin">Welcome</p>
             <p className="continueLogin">Sign in to your account to continue</p>
             <Divider />
-
             <Form form={form} onFinish={handleLogin}>
               <p style={{ fontWeight: "bold" }}>Username</p>
-              <Form.Item
-                name="username"
-                rules={[{ required: true, message: "Please type the username" }]}
-              >
+              <Form.Item name="username" rules={[{ required: true, message: "Please type the username" }]}>
                 <Input className="InputLogin" placeholder="Username" />
               </Form.Item>
 
               <p style={{ fontWeight: "bold" }}>Gmail</p>
-              <Form.Item
-                name="gmail"
-                rules={[{ required: true, message: "Please type the gmail" }]}
-              >
+              <Form.Item name="gmail" rules={[{ required: true, message: "Please type the gmail" }]}>
                 <Input className="InputLogin" placeholder="Gmail" type="email" />
               </Form.Item>
 
               <p style={{ fontWeight: "bold" }}>Password</p>
-              <Form.Item
-                name="password"
-                rules={[{ required: true, message: "Please type the password" }]}
-              >
+              <Form.Item name="password" rules={[{ required: true, message: "Please type the password" }]}>
                 <Input.Password className="InputLogin" placeholder="Password" />
               </Form.Item>
 
