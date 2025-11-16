@@ -71,6 +71,22 @@ body {
   justify-content: space-between;
 }
 
+.DivHeaader111 {
+  display: flex;
+  gap: 50px;
+}
+
+.theMenuotlinedd {
+  font-size: 30px;
+}
+
+.DivHeader3 {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 .Sora {
   font-size: 30px;
@@ -80,18 +96,28 @@ body {
 }
 
 
+.Sora1 {
+  width: 150px;
+  height: 150px;
+}
+
 
 .ShopButton {
   background-color: hsl(215, 85%, 25%);
   color: white;
 }
 
+.ShopButton1 {
+  background-color: hsl(215, 85%, 25%);
+  color: white;
+
+}
+
 .Header2 {
   display: flex;
   gap: 50px;
   align-items: center;
-  margin-right: 50px;
-  margin-top: -10px;
+  margin-top: -100px;
 }
 
 .loginn {
@@ -109,7 +135,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 10px;
+
 }
 
 
@@ -195,6 +221,9 @@ body {
 .stats-section {
   padding: 20px;
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 .stat-box {
@@ -460,45 +489,46 @@ body {
   margin-top: 5px;
 }
 
+/* 
 .Sora2 {
   font-size: 30px;
   color: hsl(215, 85%, 25%);
   font-weight: bold;
 
-}
+} */
 
 
 
 /*Footer*/
 
-.FooterText1{
+.FooterText1 {
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   font-size: 15px;
 }
 
 
-.TheFooter{
+.TheFooter {
   background-color: #D8ECFC;
   box-shadow: 0 4px 80px rgba(0, 0, 0, 0.08);
 }
 
 
 
-.Link1{
+.Link1 {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.Link2{
+.Link2 {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.lastFooter{
+.lastFooter {
   display: flex;
   justify-content: center;
   opacity: 0.5;
@@ -509,15 +539,815 @@ body {
 
 .DivShow {
   position: fixed;
-  top: 80px; 
-  right: 40px; 
+  top: 80px;
+  right: 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background-color: white;
   color: black;
   padding: 10px 15px;
   border-radius: 10px;
   border: solid black 1px;
-  z-index: 1000; 
+  z-index: 1000;
+}
+
+
+
+/* contact page */
+
+.GambarContact {
+  object-fit: "cover";
+  z-Index: 0;
+  margin-top: 43px;
+
+}
+
+.TheBackgrounddd {
+  background: linear-gradient(to right, rgba(10, 43, 115, 0.95), rgba(27, 95, 170, 0.9), rgba(45, 139, 207, 0.9), rgba(71, 180, 245, 0.9));
+  z-index: 1;
+  position: absolute;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+
+}
+
+.Sora4 {
+  margin-top: 1px;
+}
+
+.contactText {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  margin-left: 130px;
+
+}
+
+
+.TheTextCon {
+  color: white;
+  font-size: 20px;
+
+}
+
+.texttwo {
+  margin-left: 110px;
+}
+
+.alldivtextCont {
+  width: 1256px;
+  height: 710px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 400px;
+
+}
+
+
+.AllCOntent {
+  position: relative;
+  height: 100vh;
+}
+
+
+
+
+
+
+/* ABout page and Visi and mission page */
+
+
+.AboutUs {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.AllHeaderAbout {
+  padding: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.OurStory {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  color: #00264d;
+  font-size: 15px;
+
+}
+
+
+.TextUnderAbout {
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+}
+
+.TheAllDiv {
+  margin-top: 250px;
+}
+
+.TheAllDiv {
+  background: linear-gradient(to bottom, #ffffff 0%, #eff1f4 100%);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.Moderen {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.TextModren {
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+.CardModeren {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  margin-left: 230px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+  margin-top: -100px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.CardModeren:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.50);
+}
+
+
+
+
+.CardValues {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  margin-left: 230px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+  margin-top: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.CardValues:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.50);
+}
+
+.Values {
+  font-weight: 500;
+  font-size: 30px;
+
+}
+
+.Textvalues {
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+.DivPading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
+.TheTexttt {
+  background-color: rgba(211, 211, 211, 0.315);
+  color: #00264d;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid black 1px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.CardJourney {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  margin-left: 230px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+  margin-top: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.CardJourney:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.50);
+}
+
+
+.Journey {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+
+.TextJourney {
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+.alldivCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: -50px;
+}
+
+.logoVis {
+  font-size: 30px;
+  background-color: rgba(211, 211, 211, 0.502);
+  padding: 4px 8px;
+  border-radius: 11px;
+  display: inline;
+}
+
+
+.OurVission {
+  font-size: 30px;
+  font-weight: 500;
+  color: #00264d;
+  margin-top: 10px;
+}
+
+
+.VissionText {
+  opacity: 0.8;
+  text-decoration: inherit;
+  margin-top: 10px;
+
+
+}
+
+.CardVission {
+  border: solid black 1px;
+  height: 520px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.CardVission:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.50);
+}
+
+
+
+
+.CardMission {
+  border: solid black 1px;
+  height: 520px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+
+.CardMission:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.50);
+}
+
+
+.TheSpanNum {
+  background-color: rgba(211, 211, 211, 0.566);
+  padding: 7px;
+  margin-right: 10px;
+  font-weight: 700;
+
+  border-radius: 10px;
+
+}
+
+.LogoMis {
+  font-size: 30px;
+  background-color: rgba(211, 211, 211, 0.502);
+  padding: 4px 8px;
+  border-radius: 11px;
+  display: inline;
+}
+
+.ourMission {
+  font-size: 30px;
+  font-weight: 500;
+  color: #00264d;
+  margin-top: 10px;
+}
+
+.alldivNumber {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.FooterText1 {
+  margin-left: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact form page */
+
+
+
+
+
+
+
+.DivMess {
+  width: 400px;
+  margin-top: 50px;
+  display: flex;
+  gap: 100px;
+  margin-left: 200px;
+  margin-top: 200px;
+}
+
+
+.AlldivTextMess {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+
+.TheDivtextMess {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.MessCard {
+  border: solid #0166cb 1px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.10);
+  transition: all 0.2s ease-in-out;
+}
+
+.MessCard:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+.SendAM {
+  font-size: 30px;
+  font-weight: bold;
+  color: #00264d;
+}
+
+.TextMess {
+  opacity: 0.5;
+}
+
+.InputName {
+  width: 300px;
+  margin-top: 10px;
+}
+
+.InputMess {
+  width: 300px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+
+
+.ContactInfor {
+  font-size: 30px;
+  font-weight: bold;
+  color: #00264d;
+}
+
+.TextInfor {
+  opacity: 0.5;
+}
+
+
+.AlldvPhone {
+  display: flex;
+}
+
+.PhoneCard {
+  width: 500px;
+  border: solid #0166cb 1px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.10);
+  transition: all 0.2s ease-in-out;
+  height: 120px;
+}
+
+.PhoneCard:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+}
+
+.PhoneLogo {
+  background-color: #51c5f3;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.DivTextPhone {
+  margin-left: 20px;
+}
+
+
+.DivTextAddress {
+  margin-left: 20px;
+}
+
+.PhoneText {
+  font-weight: 500;
+  color: #00264d;
+  font-size: 18px;
+}
+
+.EmailCard {
+  width: 500px;
+  border: solid #0166cb 1px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.10);
+  transition: all 0.2s ease-in-out;
+  height: 120px;
+}
+
+.EmailCard:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+.TheFooterContact {
+  background-color: #D8ECFC;
+  box-shadow: 0 4px 80px rgba(0, 0, 0, 0.08);
+  margin-top: 150px;
+}
+
+.DivTextCOntct {
+  margin-left: 0px;
+}
+
+
+
+/* Contact Header */
+
+.DivHeaader222 {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.theMenuotlinedd22 {
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+.Sora4 {
+  margin-top: 0px;
+}
+
+.DivHeader22 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+
+
+.Header3 {
+  margin-top: 0px;
+}
+
+.Sora2 {
+  margin-top: 0px;
+}
+
+.Header33 {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: -10px;
+}
+
+
+
+
+
+
+/* Header Shop Page */
+
+.TheMenuOutShop {
+  font-size: 30px;
+}
+
+.Testt22 {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Sora55 {
+  display: flex;
+}
+
+/* Responsive for Mobile Devices */
+@media (max-width: 768px) {
+
+  /* Contact Header */
+  .theMenuotlinedd22 {
+    font-size: 20px;
+    margin-top: -50px;
+  }
+
+  .DivHeader22 {
+    gap: 50px;
+  }
+
+  .Sora4 {
+    height: 60px;
+  }
+
+
+  /* For Contact page */
+
+
+  /* .Sora4{
+  margin-top: -15px;
+} */
+
+
+  .DivHeader {
+    gap: 20px;
+  }
+
+  .GambarContact {
+    height: 300px;
+  }
+
+  .TheBackgrounddd {
+    height: 300px;
+  }
+
+
+  .alldivtextCont {
+    margin-left: 30px;
+    margin-top: -200px;
+  }
+
+  .contactText {
+    font-size: 30px;
+    margin-left: 90px;
+  }
+
+  .TheTextCon {
+    font-size: 10px;
+    margin-left: 25px;
+  }
+
+  .texttwo {
+    margin-left: 70px;
+  }
+
+
+  .AllCOntent {
+    height: 40vh;
+  }
+
+
+  .DivMess {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+
+  .TextMess {
+    font-size: 10px;
+  }
+
+
+  .SendAM {
+    font-size: 25px;
+  }
+
+  .InputName {
+    width: 250px;
+  }
+
+  .InputMess {
+    width: 250px;
+  }
+
+
+  .MessCard {
+    width: 300px;
+    margin-left: 30px;
+  }
+
+  .PhoneCard {
+    width: 300px;
+    margin-left: 30px;
+  }
+
+
+  .EmailCard {
+    width: 300px;
+    margin-left: 30px;
+  }
+
+  .DivTextAddress {
+    font-size: 12px;
+  }
+
+  .DivTextCOntct {
+    margin-left: 30px;
+  }
+
+  /*  ____ */
+
+
+
+  /* hEader login Page */
+
+  .DivHeader3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .Header3 {
+    margin-top: -20px;
+  }
+
+  .Sora55 {
+    margin-top: -20px;
+  }
+
+
+
+
+
+  /* Header Shop Page */
+
+  .Header33 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 40px;
+  }
+
+  .TheMenuOutShop {
+    font-size: 20px;
+  }
+
+  .Sora2 {
+    margin-top: 30px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .Testt22 {
+    gap: 30px;
+
+  }
+
+
+
+
+  .AllHeaderAbout {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .AboutUs {
+    font-size: 28px;
+  }
+
+  .OurStory {
+    font-size: 14px;
+  }
+
+  .TextUnderAbout {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .CardModeren,
+  .CardValues,
+  .CardJourney,
+  .CardVission,
+  .CardMission {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .alldivCard {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 0;
+  }
+
+  .DivPading {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .TheTexttt {
+    margin: 5px;
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .OurVission,
+  .ourMission {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .VissionText,
+  .alldivNumber {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .TheSpanNum {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .logoVis,
+  .LogoMis {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 24px;
+  }
+
+  .CardVission,
+  .CardMission {
+    height: auto;
+    padding: 20px;
+  }
+
+  .TheAllDiv {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .FooterText1 {
+    font-size: 10px;
+  }
+
 }
 
 
@@ -598,16 +1428,16 @@ body {
     z-index: 1000;
   }
 
-  .Sora2{
+  .Sora2 {
     font-size: 20px;
   }
-  
+
 
 
 
   /* HERO SECTION */
 
-  .animated-bg2{
+  .animated-bg2 {
     margin-top: 50px;
   }
 
@@ -675,7 +1505,7 @@ body {
   }
 
 
-  
+
 
   .tabss .ant-tabs-nav {
     display: flex;
@@ -712,36 +1542,60 @@ body {
     z-index: 1000;
   }
 
-  
+
   .DivShow {
     position: fixed;
-    top: 80px; 
-    right: 40px; 
+    top: 80px;
+    right: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     background-color: white;
     color: black;
     padding: 10px 15px;
     border-radius: 10px;
     border: solid black 1px;
-    z-index: 1000; 
+    z-index: 1000;
     font-size: 10px;
   }
-  
-  
 
-  .DivHeader2{
+  .Sora1 {
+    width: 250px;
+    height: 250px;
+
+  }
+
+
+  .DivHeader3 {
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+
+  .ShopButton1 {
+    width: 50px;
+    font-size: 10px;
+  }
+
+
+  .DivHeader2 {
     font-size: 1px;
     gap: 5px;
     display: flex;
     align-items: center;
   }
 
-  .Header2{
+  .Header2 {
     margin-right: 20px;
   }
 
-  .Sora {
-    font-size: 1px;
+  .DivHeader {
+    margin-top: 25px;
+
+  }
+
+
+  .Loginn {
+    width: 40px;
+    font-size: 7px;
   }
 
   .inputt2 {
@@ -754,7 +1608,7 @@ body {
 
   .IsiCont img {
     width: 90%;
-  
+
   }
 
   .divTextTabs2 {
@@ -772,7 +1626,7 @@ body {
 }
 
 
-.FooterText1{
+.FooterText1 {
   gap: 50px;
 }
 
@@ -839,6 +1693,8 @@ body {
     font-size: 24px;
   }
 
+
+
   .loginn {
     font-size: 16px;
   }
@@ -851,6 +1707,41 @@ body {
 
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
+
+
+  /* Header page utama */
+
+  .Sora1 {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+  }
+
+
+  .theMenuotlinedd {
+    font-size: 20px;
+    margin-left: -40px;
+  }
+
+  .Header2 {
+    margin-top: -50px;
+    margin-right: 50px;
+  }
+
+  .DivHeaader111 {
+    gap: 1px;
+  }
+
+
+
+
+
+
+
+
+
+
+
   .TitleCont {
     font-size: 28px;
   }
@@ -878,8 +1769,9 @@ body {
     font-size: 12px;
   }
 
-  .Sora {
-    font-size: 22px;
+
+  .Sora2 {
+    width: 70px;
   }
 
   .Header2 {
@@ -889,12 +1781,33 @@ body {
   .loginn {
     font-size: 15px;
   }
-  .collect{
-    margin-right: 78px;
-  }
 
   .ShopButton {
     padding: 0 10px;
     font-size: 13px;
   }
+}
+
+
+html,
+body {
+  height: auto;
+  overflow-y: auto !important;
+}
+
+
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  height: auto;
+}
+
+.animated-bg2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  height: auto;
 }

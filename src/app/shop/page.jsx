@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, use } from "react";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import {
   Layout,
@@ -10,7 +10,9 @@ import {
   message,
   Divider,
   Modal,
-  Badge
+  Badge,
+  Drawer,
+  Menu
 } from "antd";
 import "../styles/global.css";
 import Link from "next/link";
@@ -22,6 +24,7 @@ import Image from "next/image";
 import WomanPage from "../Woman/page";
 import ManPage from "../Man/page";
 import ShoesPage from "../Shoes/page";
+import { MenuOutlined } from "@ant-design/icons";
 import JewerlyPage from "../Jewerly/page";
 import AccessoriesPage from "../Accessories/page";
 import AllPage from "../All/page";
@@ -37,7 +40,7 @@ export default function ShopPage() {
   const [Show, setShow] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
-
+  const [Openn, setOpenn] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => setThetime(false), 1500);
@@ -121,7 +124,7 @@ export default function ShopPage() {
     gsap.fromTo(".TheFooter", { y: -100, opacity: 0 }, {
       y: 0, opacity: 1, duration: 1.5, ease: "power3.inOut", delay: 0.5, scrollTrigger: {
         trigger: ".TheFooter",
-        start: "800,100"
+
       }
     });
 
@@ -172,20 +175,53 @@ export default function ShopPage() {
     <Layout className="TheAll" style={{ backgroundColor: "white" }}>
       <Layout className="TheHeader" style={{ padding: "15px" }}>
         <div className="DivHeader2">
-          <div className="isiDivHeader2">
-            <Link className="Sora2" style={{ color: "black" }} href="/">
-              Sora & Co.
-            </Link>
-          </div>
 
-          <div className="Header2">
+
+
+          <Drawer
+            open={Openn}
+            placement="left"
+            onClose={() => setOpenn(false)}
+            style={{ backgroundColor: "white" }}
+          >
+            <Menu theme="light" mode="inline" style={{ backgroundColor: "white", color: "black" }}>
+              <Menu.Item>
+                <Link href="/">Home</Link>
+              </Menu.Item>
+              <Menu.Item>
+                <Link href="/Contact">Contact</Link>
+              </Menu.Item>
+
+              <Menu.Item>
+                <Link href="/Login">Login</Link>
+              </Menu.Item>
+
+              <Menu.Item>
+                <Link href="shop">Shop</Link>
+              </Menu.Item>
+
+            </Menu>
+          </Drawer>
+          <div className="isiDivHeader2">
+
+            <div className="Testt22">
+              <div>
+                <MenuOutlined className="TheMenuOutShop" onClick={() => setOpenn(true)} />
+              </div>
+              <Link className="Sora2" style={{ color: "black" }} href="/">
+                <Image src="/Sora.jpg" width={150} height={150} />
+              </Link>
+            </div>
+           </div>
+
+           <div className="Header33">
             <div className="headerrr2">
               <p
                 style={{ fontWeight: "bold", fontSize: "20px", marginTop: "10px" }}
               >
                 {Username ? `${Username}` : "Guest"}
               </p>
-            </div>
+             </div>
 
             {Username === "Guest" ? (
               <Link href="/Login">
@@ -302,6 +338,7 @@ export default function ShopPage() {
               <Link style={{ color: "black" }} href="/">Home</Link>
               <Link style={{ color: "black" }} href="/Login">Login</Link>
               <Link style={{ color: "black" }} href="/shop">Shop</Link>
+              <Link style={{ color: "black" }} href="/Contact">Contact</Link>
             </div>
           </div>
 
@@ -321,7 +358,7 @@ export default function ShopPage() {
         </div>
       </Footer>
 
-      {/* MODAL CHECKOUT */}
+
       <Modal
         title="Checkout Summary"
         open={isModalOpen}

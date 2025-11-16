@@ -15,12 +15,12 @@ export default function LoginPage() {
   const [form] = Form.useForm()
   const router = useRouter()
 
- 
+
   useEffect(() => {
     if (typeof window === "undefined") return;
     gsap.registerPlugin(ScrollTrigger);
 
-    if (!Thetime) { 
+    if (!Thetime) {
       const timer = setTimeout(() => {
         gsap.fromTo(".TheHeader",
           { y: -80, opacity: 0 },
@@ -75,20 +75,20 @@ export default function LoginPage() {
   return (
     <Layout>
       <Header className="TheHeader">
-        <div className="DivHeader">
+
+        <div className="DivHeader3">
           <div>
-            <p className="Sora">
-              <Link style={{ color: "black" }} href="/">
-                Sora & Co.
-              </Link>
-            </p>
+            <Link style={{ color: "black" }} href="/">
+              <Image className="Sora55" src="/Sora.jpg" width={150} height={150} />
+            </Link>
           </div>
-          <div className="Header2">
+          <div className="Header3">
             <Button className="ShopButton">
               <Link style={{ fontWeight: "500" }} href="/shop">Shop Now</Link>
             </Button>
           </div>
         </div>
+
       </Header>
 
       <Content style={{ position: "relative", height: "100vh" }}>
