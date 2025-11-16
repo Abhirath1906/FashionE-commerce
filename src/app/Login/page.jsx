@@ -1,11 +1,12 @@
 "use client"
 import "../styles/global.css"
-import { Layout, Button, Card, Form, Input, Divider, Spin, message } from "antd"
+import { Layout, Button, Card, Form, Input, Divider, Spin, message, Drawer, Menu } from "antd"
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { MenuOutlined } from "@ant-design/icons";
 import { useRouter } from "next/navigation"
 
 const { Content, Header } = Layout
@@ -13,6 +14,7 @@ const { Content, Header } = Layout
 export default function LoginPage() {
   const [Thetime, setThetime] = useState(true)
   const [form] = Form.useForm()
+  const [Openn, setOpenn] = useState(false)
   const router = useRouter()
 
 
@@ -76,8 +78,52 @@ export default function LoginPage() {
     <Layout>
       <Header className="TheHeader">
 
+
+
+
+
+
+        <Drawer
+          open={Openn}
+          placement="left"
+          onClose={() => setOpenn(false)}
+          style={{ backgroundColor: "white" }}
+        >
+          <Menu theme="light" mode="inline" style={{ backgroundColor: "white", color: "black" }}>
+            <Menu.Item>
+              <Link href="/">Home</Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link href="/Contact">Contact</Link>
+            </Menu.Item>
+
+            <Menu.Item>
+              <Link href="/Login">Login</Link>
+            </Menu.Item>
+
+            <Menu.Item>
+              <Link href="shop">Shop</Link>
+            </Menu.Item>
+
+          </Menu>
+        </Drawer>
+
         <div className="DivHeader3">
-          <div>
+
+
+
+          <div className="TheSoraLoginDiv">
+
+
+            
+
+              <MenuOutlined
+                onClick={() => setOpenn(true)}
+                className="theMenuotlineddLogin"
+
+              />
+           
+
             <Link style={{ color: "black" }} href="/">
               <Image className="Sora55" src="/Sora.jpg" width={150} height={150} />
             </Link>

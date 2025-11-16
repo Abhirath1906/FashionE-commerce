@@ -1229,10 +1229,6 @@ body {
     margin-top: -20px;
   }
 
-  .Sora55 {
-    margin-top: -20px;
-  }
-
 
 
 
@@ -1349,6 +1345,41 @@ body {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* login header */
+
+.TheSoraLoginDiv {
+  display: flex;
+  gap: 50px;
+
+}
+
+
+.theMenuotlineddLogin {
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+/* 
+.Sora55 {
+  margin-top: 30px;
+} */
+
 
 
 /* ========================= */
@@ -1704,6 +1735,50 @@ body {
     padding: 0 12px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* login page header */
+
+.TheSoraLoginDiv {
+  display: flex;
+  gap: 1px;
+  margin-top: -15px;
+}
+
+
+.theMenuotlineddLogin {
+  font-size: 25px;
+  margin-right: 1px;
+
+}
+
+
+.Sora55 {
+  margin-top: -1px;
+}
+
+/* .DivHeader3 {
+  display: flex;
+  gap: 50px;
+} */
+
+
+
+
+
+
 
 /* Small Mobile (≤480px) */
 @media (max-width: 480px) {
