@@ -506,11 +506,13 @@ body {
   align-items: center;
   justify-content: space-evenly;
   font-size: 15px;
+  color: white;
 }
 
 
 .TheFooter {
-  background-color: #D8ECFC;
+  background-color: #193857;
+  color: white;
   box-shadow: 0 4px 80px rgba(0, 0, 0, 0.08);
 }
 
@@ -520,12 +522,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  color: white;
 }
 
 .Link2 {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  color: white;
 }
 
 .lastFooter {
@@ -609,17 +613,76 @@ body {
 }
 
 
+/* New COntact */
+
+.AllDivFirst {
+  display: flex;
+  align-items: center;
+  margin-top: 200px;
+  justify-content: center;
+  gap: 240px;
+}
+
+
+.AlldivTextpic {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Premiumtxt {
+  color: #00b8ff;
+  border: solid #00b8ff 2px;
+  padding: 8px;
+  width: 135px;
+  justify-content: center;
+  border-radius: 30px;
+  font-size: 10px;
+  display: inline-block;
+  background-color: #00b7ff29;
+}
+
+.lastColor {
+  color: #193857;
+}
+
+.FirstText {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.Gedungpic {
+  box-shadow: 0 6px 30px #3b77b4;
+  width: 450px;
+  height: 300px;
+  transition: all 0.2s ease-in-out;
+}
+
+.Gedungpic:hover {
+  box-shadow: 0 6px 50px #3b77b4;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 /* ABout page and Visi and mission page */
-
+/* bagian bawah page utama */
 
 .AboutUs {
   display: flex;
   justify-content: center;
-  font-size: 40px;
+  font-size: 70px;
   font-weight: bold;
   flex-direction: column;
   align-items: center;
@@ -631,15 +694,26 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  /* background-color: #E9F2F7;
+  z-index: 0; */
 }
 
 .OurStory {
+  display: inline-block;
+  justify-content: center;
+  color: #00b8ff;
+  background-color: #00b7ff3e;
+  border: solid #00b8ff 1px;
+  font-size: 15px;
+  width: 90px;
+  display: flex;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.divStory {
   display: flex;
   justify-content: center;
-  text-decoration: underline;
-  color: #00264d;
-  font-size: 15px;
-
 }
 
 
@@ -663,43 +737,203 @@ body {
 
 .Moderen {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .TextModren {
   opacity: 0.5;
   margin-top: 20px;
+  font-weight: bold;
+
+}
+
+.AlldivinText {
+  display: flex;
+  flex-direction: column;
+}
+
+.SketchLogo {
+  font-size: 40px;
+  background-color: #00b8ff;
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+}
+
+.AlldivCardMO {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
 }
 
 .CardModeren {
-  width: 800px;
-  display: flex;
-  justify-content: center;
-  margin-left: 230px;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
-  margin-top: -100px;
+  border: solid lightgray 2px;
+  padding: 20px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.20);
   transition: all 0.2s ease-in-out;
 }
 
 
 .CardModeren:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.50);
+  box-shadow: 0 6px 30px #00b8ff;
 }
 
 
 
 
-.CardValues {
-  width: 800px;
+.AlldivLeader{
+  background: linear-gradient(to right, #ffffff, #E9F2F7);
+  height: 100vh;
+}
+
+
+.FIrstTextLea{
+  display: inline-block;
+  justify-content: center;
+  color: #00b8ff;
+  background-color: #00b7ff3e;
+  border: solid #00b8ff 1px;
+  font-size: 14px;
+  width: 120px;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.DivFirstTextLea{
   display: flex;
   justify-content: center;
-  margin-left: 230px;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
-  margin-top: 50px;
-  transition: all 0.2s ease-in-out;
 }
 
+.MeetLeader{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.secondTextLea{
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+  margin-top: 10px;
+}
+
+.Card1Avatar{
+  display:inline-block;
+  padding: 10px;
+  box-shadow: 0 5px 5px rgb(0, 0, 10);
+  transition: all 0.2s ease-in-out;
+
+}
+
+.Card1Avatar:hover{
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 50);
+}
+
+.Orang123{
+  width: 130px;
+  height: 130px;
+  border: solid white 3px;
+  box-shadow: 0 6px 30px rgb(4, 150, 207);
+  transition: all 0.2s ease-in-out;
+
+}
+
+.Orang123:hover{
+  box-shadow: 0 6px 50px rgb(4, 150, 207);
+
+}
+
+.AlldivInCard{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Name1Lea{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+  
+}
+
+.TheTitleLea{
+  display: inline-block;
+  justify-content: center;
+  color: #00b8ff;
+  background-color: #00b7ff3e;
+  border: solid #00b8ff 1px;
+  font-size: 10px;
+  width: 100px;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.TheTitleLea2{
+  display: inline-block;
+  justify-content: center;
+  color: #00b8ff;
+  background-color: #00b7ff3e;
+  border: solid #00b8ff 1px;
+  font-size: 10px;
+  width: 153px;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.InCardLea{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+
+.CardTextLea{
+  font-size: 10px;
+  opacity: 0.5;
+
+}
+
+.SpanTextLea{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.AlldivValuess {
+  margin-top: 150px;
+  background: linear-gradient(to right, #ffffff, #E9F2F7);
+  z-index: 0;
+
+}
+
+.LogoValues {
+  font-size: 30px;
+  background-color: #00264d;
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+}
+
+.DivLogos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.DivValues {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
 
 .CardValues:hover {
   transform: scale(1.1);
@@ -707,8 +941,8 @@ body {
 }
 
 .Values {
-  font-weight: 500;
-  font-size: 30px;
+  font-weight: bold;
+  font-size: 40px;
 
 }
 
@@ -720,49 +954,104 @@ body {
 .DivPading {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 50px;
+  margin-top: 50px;
+  margin-left: 100px;
+  padding: 10px;
 }
 
 
 .TheTexttt {
-  background-color: rgba(211, 211, 211, 0.315);
-  color: #00264d;
-  padding: 10px;
-  border-radius: 10px;
-  border: solid black 1px;
-  width: 150px;
-  display: flex;
-  justify-content: center;
-
+  font-weight: 500;
+  font-weight: bold;
 }
 
-
-.CardJourney {
-  width: 800px;
+.divTexttt {
+  padding: 20px;
   display: flex;
-  justify-content: center;
-  margin-left: 230px;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
-  margin-top: 50px;
+  flex-direction: column;
+  gap: 5px;
   transition: all 0.2s ease-in-out;
 }
 
-.CardJourney:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.50);
+.divTexttt:hover {
+  background-color: #00b7ff00;
+  box-shadow: 0 6px 30px #00b8ff;
+  scale: 1.1;
+}
+
+.AllLogos {
+  font-size: 30px;
+  color: #00b8ff;
+  background: #00b7ff6c;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  width: 50px;
 }
 
 
+
+
+.DivBoldText {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  gap: 30px;
+}
+
+.AlldivJourneyy {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #ffffff, #E9F2F7);
+  z-index: 0;
+  padding: 20px;
+  height: 400px;
+  gap: 200px;
+
+}
+
 .Journey {
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.ArrowLogos {
   font-size: 30px;
+  color: #ffffff;
+  background: #00264d;
+  padding: 5px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  width: 50px;
+}
+
+.OurDirect {
+  display: inline-block;
+  justify-content: center;
+  color: #0b2342;
+  font-weight: bold;
+  background: linear-gradient(to right, #e5e7eb, #ffffff);
+  border: solid lightgray 1px;
+  font-size: 15px;
+  width: 150px;
+  display: flex;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.DivOurDirect {
+  display: flex;
+  justify-content: center;
 }
 
 
 .TextJourney {
   opacity: 0.5;
   margin-top: 20px;
+  font-size: 15px;
 }
 
 .alldivCard {
@@ -782,6 +1071,13 @@ body {
 }
 
 
+.AllDivVisiMisi {
+  background: linear-gradient(to right, #e5e7eb, #ffffff);
+  padding: 10px;
+  padding-bottom: 100px; 
+}
+
+
 .OurVission {
   font-size: 30px;
   font-weight: 500;
@@ -790,16 +1086,42 @@ body {
 }
 
 
+
 .VissionText {
   opacity: 0.8;
   text-decoration: inherit;
   margin-top: 10px;
-
+  transition: all 0.2s ease-in-out;
 
 }
 
+.VissionText:hover{
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+
+.AimLogos{
+  background-color: #00264d;
+  color: white;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.GlobalLogos{
+  background-color: #00264d;
+  color: white;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
 .CardVission {
-  border: solid black 1px;
+  border: solid lightgray 1px;
   height: 520px;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
   transition: all 0.2s ease-in-out;
@@ -813,7 +1135,7 @@ body {
 
 
 .CardMission {
-  border: solid black 1px;
+  border: solid lightgray 1px;
   height: 520px;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
   transition: all 0.2s ease-in-out;
@@ -822,6 +1144,29 @@ body {
 
 .CardMission:hover {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.50);
+  transform: scale(1.05); 
+}
+
+
+.DivOneText{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.DivOneText:hover{
+  background-color: #00b7ff90;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.SkecthLogosText{
+  background: linear-gradient(to right, #e5e7eb, #ffffff);
+  padding: 10px;
+  color: gray;
+  font-size: 20px;
+  border-radius: 10px;
 }
 
 
@@ -861,6 +1206,7 @@ body {
   margin-left: 1px;
 }
 
+/*------------------------*/
 
 
 
@@ -942,7 +1288,7 @@ body {
 .ContactInfor {
   font-size: 30px;
   font-weight: bold;
-  color: #00264d;
+  color: rgb(0, 38, 77);
 }
 
 .TextInfor {
@@ -956,7 +1302,7 @@ body {
 
 .PhoneCard {
   width: 500px;
-  border: solid #0166cb 1px;
+  border: solid rgb(1, 102, 203) 1px;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.10);
   transition: all 0.2s ease-in-out;
   height: 120px;
@@ -1003,7 +1349,7 @@ body {
 
 
 .TheFooterContact {
-  background-color: #D8ECFC;
+  background-color: #193857;
   box-shadow: 0 4px 80px rgba(0, 0, 0, 0.08);
   margin-top: 150px;
 }
@@ -1011,6 +1357,31 @@ body {
 .DivTextCOntct {
   margin-left: 0px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1063,6 +1434,36 @@ body {
 
 
 
+
+/* Header Home */
+
+.divsora1 {
+  display: flex;
+  align-items: center;
+  margin-top: -4px;
+}
+
+.TheTextLogos {
+  font-size: 15px;
+}
+
+.Header3 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.isiDivHeader111 {
+  display: flex;
+  align-items: center;
+  gap: 750px;
+}
+
+.TheMenuOutHome {
+  font-size: 30px;
+}
+
 /* Header Shop Page */
 
 .TheMenuOutShop {
@@ -1076,29 +1477,190 @@ body {
 }
 
 
+.divsora3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.TheTextLogos3 {
+  font-size: 20px;
+}
 
 
 
 .Sora55 {
   display: flex;
 }
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  /* ================= HEADER ABOUT ================= */
+
+  .AllHeaderAbout {
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .AboutUs {
+    font-size: 36px;
+  }
+
+  .TextUnderAbout {
+    font-size: 14px;
+  }
+
+  .OurStory {
+    font-size: 13px;
+    width: auto;
+    padding: 4px 12px;
+  }
+
+  /* ================= MODERN SECTION ================= */
+
+  .AlldivCardMO {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .Moderen {
+    font-size: 28px;
+  }
+
+  .TextModren {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .CardModeren {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ================= VALUES ================= */
+
+  .DivValues {
+    margin-left: 0;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .DivPading {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 20px;
+  }
+
+  .divTexttt {
+    width: 100%;
+  }
+
+  .Values {
+    font-size: 30px;
+  }
+
+  /* ================= OUR JOURNEY ================= */
+
+  .AlldivJourneyy {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .DivBoldText {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .Journey {
+    font-size: 30px;
+  }
+
+  .TextJourney {
+    font-size: 14px;
+  }
+
+  /* ================= LEADERSHIP ================= */
+
+  .MeetLeader {
+    font-size: 32px;
+    text-align: center;
+    
+  }
+
+  .secondTextLea {
+    font-size: 13px;
+    padding: 0 20px;
+    margin-left: 25px;
+  }
+
+  .InCardLea {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .Orang123 {
+    width: 110px;
+    height: 110px;
+  }
+
+  .AlldivLeader{
+    height: 170vh;
+  }
+
+  /* ================= VISI MISI ================= */
+
+  .alldivCard {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 0;
+    padding: 0 20px;
+  }
+
+  .CardVission,
+  .CardMission {
+    width: 100%;
+    height: auto;
+  }
+
+  .OurVission,
+  .ourMission {
+    font-size: 24px;
+  }
+
+  .VissionText {
+    font-size: 14px;
+  }
+
+  .DivOneText {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+
+}
+
+
+
+
+
+
+
 
 /* Responsive for Mobile Devices */
 @media (max-width: 768px) {
@@ -1257,7 +1819,73 @@ body {
 
   }
 
+  .divsora3 {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    margin-right: 40px;
+  }
 
+  .TheTextLogos3 {
+    font-size: 10px;
+  }
+
+  .TheCoShop {
+    margin-left: 5px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Header Home Page */
+
+
+  .divsora3 {
+    display: flex;
+    gap: 10px;
+
+
+  }
+
+  .TheTextLogos3 {
+    font-size: 10px;
+    display: flex;
+  }
+
+
+  .isiDivHeader111 {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .TheCo {
+
+    margin-left: 3px;
+
+  }
+
+  .TheMenuOutHome {
+    font-size: 20px;
+    margin-top: -20px;
+  }
+
+
+
+
+
+
+
+  /* bagian bawah page utama(mobile) */
 
 
   .AllHeaderAbout {
@@ -1347,8 +1975,7 @@ body {
 }
 
 
-
-
+/* -----------------------*/
 
 
 
@@ -1664,6 +2291,58 @@ body {
 
 /* Mobile Landscape (≤768px) */
 @media (max-width: 768px) {
+
+
+
+
+
+  .AllDivFirst {
+    flex-direction: column;
+    /* dari samping jadi atas-bawah */
+    gap: 50px;
+    /* jarak dirapetin */
+    margin-top: 100px;
+    padding: 0 20px;
+    text-align: center;
+
+  }
+
+  .AlldivTextpic {
+    align-items: center;
+  }
+
+  .Premiumtxt {
+    padding: 6px 12px;
+    font-size: 9px;
+    width: auto;
+    /* biar ngikut teks */
+  }
+
+  .FirstText {
+    font-size: 32px;
+    /* dari 50px jadi lebih kecil */
+
+  }
+
+  /* === GAMBAR GEDUNG === */
+  .Gedungpic {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
   .TitleCont {
     margin-top: 10px;
     font-size: 36px;

@@ -143,6 +143,8 @@ export default function ShopPage() {
     if (Items.length === 0) {
       message.warning("Your cart is empty!");
       return;
+    } else{
+      message.success("Checkout Success")
     }
     setIsModalOpen(true);
   };
@@ -209,19 +211,25 @@ export default function ShopPage() {
                 <MenuOutlined className="TheMenuOutShop" onClick={() => setOpenn(true)} />
               </div>
               <Link className="Sora2" style={{ color: "black" }} href="/">
-                <Image src="/Sora.jpg" width={150} height={150} />
+                <div className="divsora3">
+                  <Image style={{ marginTop: "-5px" }} src="/theLogos.jpg" width={70} height={70} />
+
+                  <p className="TheTextLogos3"><span style={{ color: "rgb(28, 58, 88)" }}>Sora</span> <span style={{ color: "rgb(1, 102, 203)" }}>&
+                    <span className="TheCoShop">Co.</span></span></p>
+
+                </div>
               </Link>
             </div>
-           </div>
+          </div>
 
-           <div className="Header33">
+          <div className="Header33">
             <div className="headerrr2">
               <p
                 style={{ fontWeight: "bold", fontSize: "20px", marginTop: "10px" }}
               >
                 {Username ? `${Username}` : "Guest"}
               </p>
-             </div>
+            </div>
 
             {Username === "Guest" ? (
               <Link href="/Login">
@@ -335,19 +343,19 @@ export default function ShopPage() {
           <div>
             <p style={{ fontWeight: "bold", fontSize: "18px" }}>Quick Links</p>
             <div className="Link1">
-              <Link style={{ color: "black" }} href="/">Home</Link>
-              <Link style={{ color: "black" }} href="/Login">Login</Link>
-              <Link style={{ color: "black" }} href="/shop">Shop</Link>
-              <Link style={{ color: "black" }} href="/Contact">Contact</Link>
+              <Link style={{ color: "white"}} href="/">Home</Link>
+              <Link style={{ color: "white" }} href="/Login">Login</Link>
+              <Link style={{ color: "white" }} href="/shop">Shop</Link>
+              <Link style={{ color: "white" }} href="/Contact">Contact</Link>
             </div>
           </div>
 
           <div>
             <p style={{ fontWeight: "bold", fontSize: "18px" }}>Follow Us</p>
             <div className="Link2">
-              <a style={{ color: "black" }} href="https://www.instagram.com">Instagram</a>
-              <a style={{ color: "black" }} href="https://www.facebook.com/?locale=id_ID">Facebook</a>
-              <a style={{ color: "black" }} href="https://x.com">Twitter</a>
+              <a style={{ color: "white" }} href="https://www.instagram.com">Instagram</a>
+              <a style={{ color: "white" }} href="https://www.facebook.com/?locale=id_ID">Facebook</a>
+              <a style={{ color: "white" }} href="https://x.com">Twitter</a>
             </div>
           </div>
         </div>

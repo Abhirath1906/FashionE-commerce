@@ -1,6 +1,6 @@
 "use client"
 import "../styles/global.css"
-import { Layout, Button, Card, Form, Input, Divider, Spin, message, Modal, Drawer, Menu } from "antd"
+import { Layout, Button, Card, Form, Input, Divider, Spin, message, Modal, Drawer, Menu, Avatar } from "antd"
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -93,7 +93,22 @@ export default function LoginPage() {
                     trigger: ".TheFooterContact",
                     start: "-1200,300",
                 }
-                
+
+            })
+
+            gsap.fromTo(".AlldivTextpic", { x: -100, opacity: 0 }, {
+                x: 0, opacity: 1, duration: 1.2, scrollTrigger: {
+                    trigger: ".AlldivTextpic",
+                    start: "-1200,300",
+                }
+            })
+
+            gsap.fromTo(".Gedungpic", { x: 100, opacity: 0 }, {
+                x: 0, opacity: 1, duration: 1.2, scrollTrigger: {
+                    trigger: ".Gedungpic",
+                    // markers:true,
+                    start: "-1200,300",
+                }
             })
 
 
@@ -148,30 +163,11 @@ export default function LoginPage() {
 
     return (
         <Layout>
-            <Header className="TheHeader">
+            <Layout className="TheHeader" style={{ padding: "15px" }}>
 
 
 
-                <div className="DivHeader22">
-
-
-
-                    <div className="DivHeaader222">
-                        <div>
-
-                            <MenuOutlined
-                                onClick={() => setOpenn(true)}
-                                className="theMenuotlinedd22"
-
-                            />
-                        </div>
-
-                        <div >
-                            <Link style={{ color: "black" }} href="/">
-                                <Image className="Sora4" src="/Sora.jpg" width={150} height={150} />
-                            </Link>
-                        </div>
-                    </div>
+                <div className="DivHeader111">
 
 
                     <Drawer
@@ -199,13 +195,40 @@ export default function LoginPage() {
                         </Menu>
                     </Drawer>
 
-                    <div className="HeaderCont222">
-                        <Button className="ShopButton">
-                            <Link style={{ fontWeight: "500" }} href="/shop">Shop Now</Link>
-                        </Button>
+                    <div className="isiDivHeader111">
+
+                        <div className="Testt22">
+                            <div>
+                                <MenuOutlined className="TheMenuOutHome" onClick={() => setOpenn(true)} />
+                            </div>
+
+                            <Link className="Sora2" style={{ color: "black" }} href="/">
+                                <div className="divsora3">
+                                    <Image style={{ marginTop: "-5px" }} src="/theLogos.jpg" width={70} height={70} />
+
+                                    <p className="TheTextLogos3"><span style={{ color: "rgb(28, 58, 88)" }}>Sora</span> <span style={{ color: "rgb(1, 102, 203)" }}>&
+                                        <span className="TheCo">Co.</span></span></p>
+
+                                </div>
+                            </Link>
+
+
+                        </div>
+
+                        <div className="Header3">
+
+
+
+
+                            <Button className="ShopButton1" style={{ marginLeft: "80px" }}>
+                                <Link style={{ fontWeight: "500", }} href="/shop">
+                                    Shop Now
+                                </Link>
+                            </Button>
+                        </div>
                     </div>
                 </div>
-            </Header>
+            </Layout>
 
             <Content className="AllCOntent">
 
@@ -238,6 +261,50 @@ export default function LoginPage() {
 
 
                 </div>
+
+
+
+                <div className="AllDivFirst">
+
+                    <div className="AlldivTextpic">
+
+                        <div className="Premiumtxt">
+                            <p>Premium Office Solutions</p>
+                        </div>
+                        <div className="FirstText">
+                            <p><span>Our Office</span><br />
+                                <span className="lastColor" >Residence</span>
+                            </p>
+                        </div>
+
+                        <div>
+                            <p>Discover premium office spaces in the heart of Jakarta.<br />
+                                Experience world-class facilities and modern architecture at<br />
+                                Office Residence.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <Avatar
+                            shape="square"
+
+                            className="Gedungpic"
+                            src='/office8-building.png'
+
+                        />
+
+                    </div>
+
+
+
+                </div>
+
+
+                <Divider />
+
+
+
+
                 <div className="DivMess">
 
                     <div className="DIvMessCard">
@@ -273,10 +340,15 @@ export default function LoginPage() {
                     </div>
 
 
+
+
+
+
+
                     <div className="AlldivTextMess">
                         <div className="DivTextCOntct">
                             <p className="ContactInfor">Contact Information</p>
-                            <p className="TextInfor">Or reach out to us directly via</p>
+                            <p className="TextInfor" style={{ color: "black" }}>Or reach out to us directly via</p>
                         </div>
 
 
@@ -326,9 +398,13 @@ export default function LoginPage() {
                                             <EnvironmentOutlined className="PhoneLogo" />
                                         </div>
                                         <div className="DivTextAddress">
-                                            <p className="PhoneText">Address</p>
-                                            <p style={{ opacity: "0.5", marginTop: "5px" }}> Jl. Badila II, Tangki, Taman Sari, Kota Jakarta Barat</p>
-                                            <p style={{ opacity: "0.5", }}>DKI Jakarta, Indonesia, 11170</p>
+                                            <a target="_" href="https://www.bing.com/ck/a?!&&p=919ad3ffb2c750591dccf9f41aca8cc48c65079c2fc544d64a19ec523b847c18JmltdHM9MTc2NDIwMTYwMA&ptn=3&ver=2&hsh=4&fclid=22e8073c-d935-6585-0816-1251d828648b&u=a1L21hcHM_Jm1lcGk9MH5-RW1iZWRkZWR-QWRkcmVzc19MaW5rJnR5PTE4JnE9QmFkaWxhJTIwSUkmc3M9eXBpZC5ZTjc5OTl4MTU5MjU5NjYxNjcyOTE4MDM5NiZwcG9pcz0tNi4xNDUxMjc3NzMyODQ5MTJfMTA2LjgyMzQ4NjMyODEyNV9CYWRpbGElMjBJSV9ZTjc5OTl4MTU5MjU5NjYxNjcyOTE4MDM5Nn4mY3A9LTYuMTQ1MTI4fjEwNi44MjM0ODYmdj0yJnNWPTEmRk9STT1NUFNSUEw">
+
+                                                <p className="PhoneText">Address</p>
+                                                <p style={{ opacity: "0.5", marginTop: "5px" }}> Jl. Badila II, Tangki, Taman Sari, Kota Jakarta Barat</p>
+                                                <p style={{ opacity: "0.5", }}>DKI Jakarta, Indonesia, 11170</p>
+                                            </a>
+
                                         </div>
                                     </div>
 
@@ -353,26 +429,26 @@ export default function LoginPage() {
                         <div>
                             <p style={{ fontWeight: "bold", fontSize: "18px" }}>Quick Links</p>
                             <div className="Link1">
-                                <Link style={{ color: "black" }} href="/">Home</Link>
-                                <Link style={{ color: "black" }} href="/Login">Login</Link>
-                                <Link style={{ color: "black" }} href="/shop">Shop</Link>
-                                <Link style={{ color: "black" }} href="/Contact">Contact</Link>
+                                <Link style={{ color: "white" }} href="/">Home</Link>
+                                <Link style={{ color: "white" }} href="/Login">Login</Link>
+                                <Link style={{ color: "white" }} href="/shop">Shop</Link>
+                                <Link style={{ color: "white" }} href="/Contact">Contact</Link>
                             </div>
                         </div>
 
                         <div>
                             <p style={{ fontWeight: "bold", fontSize: "18px" }}>Follow Us</p>
                             <div className="Link2">
-                                <a style={{ color: "black" }} href="https://www.instagram.com">Instagram</a>
-                                <a style={{ color: "black" }} href="https://www.facebook.com/?locale=id_ID">Facebook</a>
-                                <a style={{ color: "black" }} href="https://x.com">Twitter</a>
+                                <a style={{ color: "white" }} href="https://www.instagram.com">Instagram</a>
+                                <a style={{ color: "white" }} href="https://www.facebook.com/?locale=id_ID">Facebook</a>
+                                <a style={{ color: "white" }} href="https://x.com">Twitter</a>
                             </div>
                         </div>
                     </div>
 
                     <Divider />
                     <div className="lastFooter">
-                        <p>© 2025 Fashion Store. All rights reserved.</p>
+                        <p style={{ color: "white" }}>© 2025 Fashion Store. All rights reserved.</p>
                     </div>
                 </Footer>
             </Content>

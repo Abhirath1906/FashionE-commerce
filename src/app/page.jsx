@@ -5,7 +5,7 @@ import Link from "next/link"
 import gsap from 'gsap';
 import Image from "next/image";
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { MenuOutlined } from "@ant-design/icons";
+import { MenuOutlined, SketchOutlined, RadarChartOutlined, TeamOutlined, ThunderboltOutlined, ArrowRightOutlined, GlobalOutlined, AimOutlined, RiseOutlined } from "@ant-design/icons";
 import { useState, useEffect } from "react"
 const { Header, Content, Footer } = Layout
 
@@ -145,7 +145,77 @@ export default function Home() {
 
       }
     })
+    gsap.fromTo(".AlldivinText", { x: 100, opacity: 0 }, {
+      x: 0, opacity: 1, duration: 1.4, scrollTrigger: {
+        trigger: ".AlldivinText",
 
+      }
+    })
+
+
+    gsap.fromTo(".DivLogos",{x:100,opacity:0},{x:0,opacity:1,duration:1.2,scrollTrigger:{
+      trigger:".DivLogos"
+    }})
+
+    gsap.fromTo(".Textvalues",{x:-100,opacity:0},{x:0,opacity:1,duration:1.2,scrollTrigger:{
+      trigger:".Textvalues"
+    }})
+
+
+    gsap.fromTo(".DivPading .divTexttt",{y:500,opacity:0},{y:0,opacity:1,duration:1.2,ease:"power1.out",stagger:{
+      grid:"auto",amount:1
+    },
+      scrollTrigger:{
+      trigger:".DivPading "
+    }})
+
+
+    gsap.fromTo(".DivBoldText",{x:-100,opacity:0},{x:0,opacity:1,duration:1.2,scrollTrigger:{
+      trigger:".DivBoldText"
+    }})
+
+    gsap.fromTo(".AllTextJour",{x:100,opacity:0},{x:0,opacity:1,duration:1.2,scrollTrigger:{
+      trigger:".AllTextJour"
+    }})
+
+    gsap.fromTo(".DivFirstTextLea",{y:-100,opacity:0},{y:0,opacity:1,duration:1.2,scrollTrigger:{
+      trigger:".DivFirstTextLea"
+    }})
+
+
+    
+
+
+    gsap.fromTo(".MeetLeader",{y:100,opacity:0},{y:0,opacity:1,duration:1.2,scrollTrigger:{
+      trigger:".MeetLeader"
+    }})
+
+    gsap.fromTo(".secondTextLea",{y:100,opacity:0},{y:0,opacity:1,duration:1.2,scrollTrigger:{
+      trigger:".secondTextLea"
+    }})
+
+
+
+    gsap.fromTo(".InCardLea .Card1Avatar",{y:200,opacity:0},{y:0,opacity:1,duration:1.2,ease:"power1.out",stagger:{
+      grid:"auto",amount:1
+    },
+      scrollTrigger:{
+      trigger:".InCardLea"
+    }})
+
+
+
+    gsap.fromTo(".DivOurDirect",{y:-100,opacity:0},{y:0,opacity:1,duration:1.2,scrollTrigger:{
+      trigger:".DivOurDirect"
+    }})
+
+    gsap.fromTo(".OurVission",{y:-100,opacity:0},{y:0,opacity:1,duration:1.2,scrollTrigger:{
+      trigger:".OurVission"
+    }})
+
+    gsap.fromTo(".VissionText",{y:100,opacity:0},{y:0,opacity:1,duration:1.2,scrollTrigger:{
+      trigger:".VissionText"
+    }})
 
 
     return () => clearTimeout(anim);
@@ -173,8 +243,8 @@ export default function Home() {
     <>
       <Layout className="TheAll">
 
-        <Header className="TheHeader">
-          <div className="DivHeader" style={{ marginTop: "10px" }}>
+        <Layout className="TheHeader" style={{ padding: "15px" }}>
+          <div className="DivHeader111">
 
 
 
@@ -203,52 +273,60 @@ export default function Home() {
               </Menu>
             </Drawer>
 
-            <div className="DivHeaader111">
 
-              <div>
 
-                <MenuOutlined
-                  onClick={() => setOpenn(true)}
-                  className="theMenuotlinedd"
+            <div className="isiDivHeader111">
 
-                />
+              <div className="Testt22">
+                <div>
+                  <MenuOutlined className="TheMenuOutHome" onClick={() => setOpenn(true)} />
+                </div>
+
+                <Link className="Sora2" style={{ color: "black" }} href="/">
+                  <div className="divsora3">
+                    <Image style={{ marginTop: "-5px" }} src="/theLogos.jpg" width={70} height={70} />
+
+                    <p style={{ fontWeight: "500" }} className="TheTextLogos3"><span style={{ color: "rgb(7, 43, 80)" }}>Sora</span> <span style={{ color: "rgb(1, 102, 203)" }}>&
+                      <span className="TheCo">Co.</span></span></p>
+
+                  </div>
+                </Link>
+
+
               </div>
-              <Link className="Sora1" style={{ color: "black" }} href="/">
-                <Image style={{ marginTop: "-5px" }} src="/Sora.jpg" width={150} height={150} />
-              </Link>
-            </div>
 
-            <div className="Header2">
-              {Username === "Guest" ? (
-                <Link href="/Login">
-                  <Button className="Loginn" style={{ fontWeight: "500" }}>
-                    Login
+              <div className="Header3">
+                {Username === "Guest" ? (
+                  <Link href="/Login">
+                    <Button className="Loginn" style={{ fontWeight: "500" }}>
+                      Login
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button
+                    className="Loginn"
+                    style={{ fontWeight: "500" }}
+                    onClick={() => {
+                      localStorage.removeItem("user");
+                      message.success("Logged out successfully!");
+                      setUsername("Guest");
+                    }}
+                  >
+                    Logout
                   </Button>
-                </Link>
-              ) : (
-                <Button
-                  className="Loginn"
-                  style={{ fontWeight: "500" }}
-                  onClick={() => {
-                    localStorage.removeItem("user");
-                    message.success("Logged out successfully!");
-                    setUsername("Guest");
-                  }}
-                >
-                  Logout
+                )}
+
+
+
+                <Button className="ShopButton1">
+                  <Link style={{ fontWeight: "500" }} href="/shop">
+                    Shop Now
+                  </Link>
                 </Button>
-              )}
-
-
-
-              <Button className="ShopButton1">
-                <Link style={{ fontWeight: "500" }} href="/shop">
-                  Shop Now
-                </Link>
-              </Button>
+              </div>
             </div>
           </div>
-        </Header>
+        </Layout>
 
         <Content >
 
@@ -312,133 +390,278 @@ export default function Home() {
 
 
                 <div className="AllHeaderAbout">
-                  <p className="OurStory">Our Story</p>
+                  <div className="divStory">
+                    <p className="OurStory">Our Story</p>
+                  </div>
 
                   <p className="AboutUs">About us
 
                   </p>
 
                   <p className="TextUnderAbout">Where every style tells a unique story</p>
-                  <Divider />
+
                 </div>
 
 
-                <Card className="CardModeren">
-                  <p className="Moderen">✨  Modern Simplicity</p>
-                  <p className="TextModren">PT. SORA & CO., founded on July 22, 2025 by three creative young people, aims to bring new colors<br />
-                    to Indonesia's fashion and lifestyle industry. With the philosophy that every style has a unique<br />
-                    story, the company embraces the concept of modern simplicity — presenting elegant, minimalist<br />
-                    products that follow trends without losing identity.</p>
-                </Card>
+                <div className="AlldivCardMO">
+                  <Card className="CardModeren">
+                    <SketchOutlined className="SketchLogo" />
+                    <p className="Moderen">Modern Simplicity</p>
+
+                  </Card>
 
 
-                <Card className="CardValues">
-                  <p className="Values">🤝  Our Values</p>
-                  <p className="Textvalues">SORA & CO. expands its reach through wholesale partners, retail, and digital platforms, building<br />
-                    customer trust through innovative and consumer-oriented approaches.</p>
+                  <div className="AlldivinText">
+
+                    <p className="TextModren">PT. SORA & CO., founded on July 22, 2025 by three creative young people, aims to bring new<br />
+                      colors to Indonesia's fashion and lifestyle industry.</p>
+
+                    <p className="TextModren">With the philosophy that every style has a unique story, the company embraces the<br />
+                      concept of modern simplicity — presenting elegant, minimalist products that follow trends<br />
+                      without losing identity.</p>
+                  </div>
+
+                </div>
+
+
+
+                <div className="AlldivValuess">
+
+                  <div className="DivValues">
+                    <div className="DivLogos">
+                      <RadarChartOutlined className="LogoValues" />
+                      <p className="Values">Our Values</p>
+                    </div>
+                    <p className="Textvalues">SORA & CO. expands its reach through wholesale partners, retail, and digital platforms, building<br />
+                      customer trust through innovative and consumer-oriented approaches.</p>
+                  </div>
+
 
                   <div className="DivPading">
-                    <div className="divTexttt">
-                      <p className="TheTexttt">Creativity</p>
-                    </div>
-                    <div className="divTexttt">
-                      <p className="TheTexttt">Integrity</p>
-                    </div>
-                    <div className="divTexttt">
-                      <p className="TheTexttt">Collaboration</p>
-                    </div>
+                    <Card className="divTexttt">
+                      <div>
+                        <SketchOutlined className="AllLogos" />
+                        <p className="TheTexttt">Creativity</p>
+                        <p>Innovative design thinking</p>
+                      </div>
+                    </Card>
 
-                    <div className="divTexttt">
-                      <p className="TheTexttt">Consistency</p>
+
+                    <Card className="divTexttt">
+
+
+                      <div >
+                        <RadarChartOutlined className="AllLogos" />
+                        <p className="TheTexttt">Integrity</p>
+                        <p>Honest and transparent</p>
+                      </div>
+                    </Card>
+
+                    <Card className="divTexttt">
+                      <div >
+                        <TeamOutlined className="AllLogos" />
+                        <p className="TheTexttt">Collaboration</p>
+                        <p>Together we achieve</p>
+                      </div>
+                    </Card>
+
+
+                    <Card className="divTexttt">
+
+                      <div >
+                        <ThunderboltOutlined className="AllLogos" />
+                        <p className="TheTexttt">Consistency</p>
+                        <p>Quality in every detail</p>
+                      </div>
+                    </Card>
+                  </div>
+
+                </div>
+
+
+                <div className="AlldivJourneyy">
+
+                  <div className="DivBoldText">
+                    <ArrowRightOutlined className="ArrowLogos" />
+                    <p className="Journey">Our Journey</p>
+                  </div>
+
+                  <div className="AllTextJour">
+                    <p className="TextJourney">As an early achievement, the company has established<br />
+                      partnerships with various suppliers and major e-<br />
+                      commerce platforms, and formed a loyal customer<br />
+                      community.
+                    </p>
+
+                    <p className="TextJourney">Moving forward, SORA & CO. is committed to continuous<br />
+                      innovation and strengthening its position as a <span style={{ fontWeight: "bold" }}>modern<br />
+                        local fashion brand</span> that brings stories to every style.</p>
+                  </div>
+
+
+
+                </div>
+
+
+
+
+                <div className="AlldivLeader">
+                  <div className="DivFirstTextLea">
+                    <p className="FIrstTextLea">Leadership Team</p>
+                  </div>
+                  <p className="MeetLeader">Meet Our Founders</p>
+                  <p className="secondTextLea">Three passionate individuals united by a vision to revolutionize modern fashion</p>
+
+                  <div>
+                    <div className="InCardLea">
+                      <Card className="Card1Avatar">
+                        <div className="AlldivInCard">
+                          <Avatar
+                            shape="circle"
+                            src="/Orang11.png"
+                            className="Orang123"
+                          />
+
+                          <p className="Name1Lea">Vanessa Lovianus</p>
+                          <p className="TheTitleLea">Co-Founder & CEO</p>
+                          <p className="CardTextLea">Visionary leader with 2+ years in fashion<br/>
+                          <span className="SpanTextLea"> School</span></p>
+                        </div>
+                      </Card>
+                      <Card className="Card1Avatar">
+                        <div className="AlldivInCard">
+                          <Avatar
+                            shape="circle"
+                            src="/Orang2.jpg"
+                            className="Orang123"
+                          />
+
+                          <p className="Name1Lea">Nicholas Nelson Huang</p>
+                          <p className="TheTitleLea2">Co-Founder & Creative Director</p>
+                          <p className="CardTextLea">Visionary leader with 2+ years in fashion<br/>
+                          <span className="SpanTextLea"> School</span></p>
+                        </div>
+                      </Card>
+                      <Card className="Card1Avatar">
+                        <div className="AlldivInCard">
+                          <Avatar
+                            shape="circle"
+                            src="/Orang3.jpg"
+                            className="Orang123"
+                          />
+
+                          <p className="Name1Lea">Billy Glen</p>
+                          <p className="TheTitleLea">Co-Founder & COO</p>
+                          <p className="CardTextLea">Visionary leader with 2+ years in fashion<br/>
+                          <span className="SpanTextLea"> School</span></p>
+                        </div>
+                      </Card>
+
                     </div>
                   </div>
-                </Card>
-
-
-                <Card className="CardJourney">
-                  <p className="Journey">🚀  Our Journey</p>
-                  <p className="TextJourney">As an early achievement, the company has established partnerships with various suppliers and major e-commerce platforms, and<br />
-                    formed a loyal customer community. Moving forward, SORA &<br />
-                    CO. is committed to continuous innovation and strengthening its position as a modern local<br />
-                    fashion brand that brings stories to every style.</p>
-
-                </Card>
-
-              </div>
-
-
-
-
-              <div className="alldivCard">
-
-                <div className="AllHeaderAbout">
-                  <p className="OurStory">Our Direction</p>
-
-                  <p className="AboutUs">Vision & Mission
-
-                  </p>
-
-                  <p className="TextUnderAbout">Leading the future of Indonesian fashion</p>
-                  <Divider />
                 </div>
 
               </div>
 
 
-              <div>
+
+
+              <div className="AllDivVisiMisi">
 
                 <div className="alldivCard">
 
-                  <Card className="CardVission">
-
-                    <p className="OurVission">Our Vision</p>
-                    <p className="VissionText">To become a leading fashion trading<br />
-                      business that provides trendy products<br />
-                      at affordable prices, trusted quality, and<br />
-                      the best service for the Indonesian<br />
-                      people.</p>
-                  </Card>
-
-                  <Card className="CardMission">
-
-
-                    <p className="ourMission">Our Mission</p>
-
-                    <div className="alldivNumber">
-                      <p><span className="TheSpanNum">1</span>
-                        Provide various latest fashion choices from<br />
-                        trusted suppliers to meet the lifestyle needs of<br />
-                        the younger generation.
-                      </p>
-
-                      <p><span className="TheSpanNum">2</span>
-                        Establish long-term partnerships with credible<br />
-                        suppliers and vendors to maintain product<br />
-                        availability.
-                      </p>
-
-                      <p><span className="TheSpanNum">3</span>
-                        Provide fast, friendly, and professional service<br />
-                        to every customer.
-                      </p>
-
-                      <p><span className="TheSpanNum">4</span>
-                        Manage the business with a neat and efficient<br />
-                        system, including stock and financial<br />
-                        recording.
-                      </p>
-
-                      <p><span className="TheSpanNum">5</span>
-                        Develop creative digital marketing to reach a<br />
-                        wider market.
-                      </p>
+                  <div className="AllHeaderAbout">
+                    <div className="DivOurDirect">
+                      <p className="OurDirect">Our Direction</p>
                     </div>
 
+                    <p className="AboutUs">Vision & Mission
 
-                  </Card>
+                    </p>
+
+                    <p className="TextUnderAbout">Leading the future of Indonesian fashion with innovation and dedication</p>
+                    <Divider />
+                  </div>
 
                 </div>
 
+
+
+                <div>
+
+                  <div className="alldivCard">
+
+                    <Card className="CardVission">
+
+                      <div>
+                        <AimOutlined className="AimLogos" />
+                        <p className="OurVission">Our Vision</p>
+                      </div>
+                      <p className="VissionText">To become a leading fashion trading<br />
+                        business that provides trendy products<br />
+                        at affordable prices, trusted quality, and<br />
+                        the best service for the Indonesian<br />
+                        people.</p>
+                    </Card>
+
+                    <Card className="CardMission">
+
+                      <div>
+                        <GlobalOutlined className="GlobalLogos" />
+                        <p className="ourMission">Our Mission</p>
+                      </div>
+
+                      <div className="alldivNumber">
+
+                        <div className="DivOneText">
+                          <SketchOutlined className="SkecthLogosText" />
+                          <p>
+                            Provide various latest fashion choices from trusted suppliers to<br />
+                            meet the lifestyle needs of the younger generation.
+                          </p>
+                        </div>
+
+                        <div className="DivOneText">
+                          <TeamOutlined className="SkecthLogosText" />
+                          <p>
+                            Establish long-term partnerships with credible suppliers and vendors to<br />
+                            maintain product availability.
+                          </p>
+                        </div>
+
+                        <div className="DivOneText">
+                          <ThunderboltOutlined className="SkecthLogosText" />
+
+                          <p>
+                            Provide fast, friendly, and professional service to every customer.
+                          </p>
+                        </div>
+
+                        <div className="DivOneText">
+                          <RiseOutlined className="SkecthLogosText" />
+                          <p>
+                            Manage the business with a neat and efficient system, including stock and<br />
+                            financial recording.
+                          </p>
+                        </div>
+
+                        <div className="DivOneText">
+                          <GlobalOutlined className="SkecthLogosText" />
+                          <p>
+                            Develop creative digital marketing to reach a wider market.
+
+
+                          </p>
+
+                        </div>
+                      </div>
+
+
+                    </Card>
+
+                  </div>
+
+                </div>
               </div>
 
 
@@ -467,19 +690,19 @@ export default function Home() {
                 <div>
                   <p style={{ fontWeight: "bold", fontSize: "18px" }}>Quick Links</p>
                   <div className="Link1">
-                    <Link style={{ color: "black" }} href="/">Home</Link>
-                    <Link style={{ color: "black" }} href="/Login">Login</Link>
-                    <Link style={{ color: "black" }} href="/shop">Shop</Link>
-                    <Link style={{ color: "black" }} href="/Contact">Contact</Link>
+                    <Link style={{ color: "white" }} href="/">Home</Link>
+                    <Link style={{ color: "white" }} href="/Login">Login</Link>
+                    <Link style={{ color: "white" }} href="/shop">Shop</Link>
+                    <Link style={{ color: "white" }} href="/Contact">Contact</Link>
                   </div>
                 </div>
 
                 <div>
                   <p style={{ fontWeight: "bold", fontSize: "18px" }}>Follow Us</p>
                   <div className="Link2">
-                    <a style={{ color: "black" }} href="https://www.instagram.com">Instagram</a>
-                    <a style={{ color: "black" }} href="https://www.facebook.com/?locale=id_ID">Facebook</a>
-                    <a style={{ color: "black" }} href="https://x.com">Twitter</a>
+                    <a style={{ color: "white" }} href="https://www.instagram.com">Instagram</a>
+                    <a style={{ color: "white" }} href="https://www.facebook.com/?locale=id_ID">Facebook</a>
+                    <a style={{ color: "white" }} href="https://x.com">Twitter</a>
                   </div>
                 </div>
               </div>
@@ -506,7 +729,7 @@ export default function Home() {
 
 
 
-      </Layout>
+      </Layout >
     </>
   )
 }

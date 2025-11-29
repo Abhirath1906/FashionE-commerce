@@ -76,7 +76,7 @@ export default function LoginPage() {
 
   return (
     <Layout>
-      <Header className="TheHeader">
+      <Layout className="TheHeader" style={{ padding: "15px" }}>
 
 
 
@@ -108,34 +108,45 @@ export default function LoginPage() {
           </Menu>
         </Drawer>
 
-        <div className="DivHeader3">
+        <div className="DivHeader111">
 
 
 
-          <div className="TheSoraLoginDiv">
+          <div className="isiDivHeader111">
+
+            <div className="Testt22">
+              <div>
+                <MenuOutlined className="TheMenuOutHome" onClick={() => setOpenn(true)} />
+              </div>
+
+              <Link className="Sora2" style={{ color: "black" }} href="/">
+                <div className="divsora3">
+                  <Image style={{ marginTop: "-5px" }} src="/theLogos.jpg" width={70} height={70} />
+
+                  <p className="TheTextLogos3"><span style={{ color: "rgb(28, 58, 88)" }}>Sora</span> <span style={{ color: "rgb(1, 102, 203)" }}>&
+                    <span className="TheCo">Co.</span></span></p>
+
+                </div>
+              </Link>
 
 
-            
+            </div>
 
-              <MenuOutlined
-                onClick={() => setOpenn(true)}
-                className="theMenuotlineddLogin"
+            <div className="Header3">
 
-              />
-           
 
-            <Link style={{ color: "black" }} href="/">
-              <Image className="Sora55" src="/Sora.jpg" width={150} height={150} />
-            </Link>
-          </div>
-          <div className="Header3">
-            <Button className="ShopButton">
-              <Link style={{ fontWeight: "500" }} href="/shop">Shop Now</Link>
-            </Button>
+
+
+              <Button className="ShopButton1" style={{ marginLeft: "80px" }}>
+                <Link style={{ fontWeight: "500", }} href="/shop">
+                  Shop Now
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
 
-      </Header>
+      </Layout>
 
       <Content style={{ position: "relative", height: "100vh" }}>
         <Image
