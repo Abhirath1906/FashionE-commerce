@@ -212,7 +212,7 @@ export default function ShopPage() {
               </div>
               <Link className="Sora2" style={{ color: "black" }} href="/">
                 <div className="divsora3">
-                  <Image style={{ marginTop: "-5px" }} src="/theLogos.jpg" width={70} height={70} />
+                  <Image style={{ marginTop: "-5px" }} src="/TheLogos.jpg" width={70} height={70} />
 
                   <p className="TheTextLogos3"><span style={{ color: "rgb(28, 58, 88)" }}>Sora</span> <span style={{ color: "rgb(1, 102, 203)" }}>&
                     <span className="TheCoShop">Co.</span></span></p>

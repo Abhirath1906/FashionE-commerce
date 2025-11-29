@@ -284,7 +284,7 @@ export default function Home() {
 
                 <Link className="Sora2" style={{ color: "black" }} href="/">
                   <div className="divsora3">
-                    <Image style={{ marginTop: "-5px" }} src="/theLogos.jpg" width={70} height={70} />
+                    <Image style={{ marginTop: "-5px" }} src="/TheLogos.jpg" width={70} height={70} />
 
                     <p style={{ fontWeight: "500" }} className="TheTextLogos3"><span style={{ color: "rgb(7, 43, 80)" }}>Sora</span> <span style={{ color: "rgb(1, 102, 203)" }}>&
                       <span className="TheCo">Co.</span></span></p>
